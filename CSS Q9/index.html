@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <title>Grid and Flex Example</title>
+    <style>
+      /* Flexbox */
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+      }
+
+      main {
+        display: flex;
+        flex: 1;
+        padding: 20px;
+      }
+
+      aside {
+        background-color: #f2f2f2;
+        padding: 20px;
+        width: 300px;
+      }
+
+      article {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap; 
+        margin-left: 20px;
+      }
+
+      .image-container {
+       
+        margin: 5px;
+      }
+
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Header</h1>
+      </header>
+      <main>
+        <aside>
+          <h3>Aside</h3>
+          <p>Aside content goes here...</p>
+        </aside>
+        <article>
+          <h2>Article Title</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at odio
+            velit. Duis id augue sed orci blandit semper. Nam et gravida nunc.
+            Curabitur dapibus ex ut erat malesuada dictum.
+          </p>
+          <div class="image-container">
+            <img
+              src="https://images.unsplash.com/photo-1685432180155-772ed0af06e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+              alt="Image description"
+            />
+          </div>
+          <div class="image-container">
+            <img
+              src="https://images.unsplash.com/photo-1685432180155-772ed0af06e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+              alt="Image description"
+            />
+          </div>
+          <div class="image-container">
+            <img
+              src="https://images.unsplash.com/photo-1685432180155-772ed0af06e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
+              alt="Image description"
+            />
+          </div>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>

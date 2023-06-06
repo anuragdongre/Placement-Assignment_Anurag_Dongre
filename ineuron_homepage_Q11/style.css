@@ -1,0 +1,688 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', 'sans-serif';
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: #edeef3;
+  color: #7163a9;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+.logo {
+  width: 100px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+nav .logo-icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.logo-text {
+  position: relative;
+  padding: 0 20px;
+  font-size: 18px;
+  border-left: 2px solid #808080;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.logo-text span {
+  vertical-align: super;
+}
+
+.logo-text:hover > .list-categories {
+  max-height: inherit;
+  opacity: 1;
+  width: 300px;
+}
+
+.list-categories {
+  position: absolute;
+  list-style-type: none;
+  padding: 10px;
+  margin: 0px;
+  max-height: 0px;
+  background: #edeef3;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 300ms ease;
+  width: 0px;
+}
+
+.list-categories li {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  transition: 0.2s ease-in-out;
+}
+
+.list-categories li:hover {
+  color: #fff;
+  background: #7163a9;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.nav-list,
+.nav-list ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-list ul li {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-list ul li:hover {
+  transform: rotate(-7deg);
+}
+.nav-btn {
+  border-radius: 15px;
+  padding: 10px 20px;
+  border: 1px solid #7163a9;
+  background: #7163a9;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 60px;
+}
+
+/* hero Section */
+
+.hero-section {
+  /* background: url('../images/hero-hackathon.png'); */
+  /* background-position: center; */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  height: 400px;
+  /* background-blend-mode: overlay; */
+  /* color: #fff; */
+  padding-top: 175px;
+  display: flex;
+}
+
+.hero-section img {
+  width: 500px;
+  margin-top: -180px;
+  margin-left: 50px;
+}
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 50%;
+  height: 400px;
+  margin-left: 50px;
+  gap: 10px;
+  color: #7163a9;
+}
+
+.hero-text h3 {
+  font-size: 30px;
+  font-weight: 500;
+  width: fit-content;
+}
+.hero-text h2 {
+  font-size: 50px;
+  font-weight: 800;
+  width: fit-content;
+}
+.hero-text h5 {
+  width: fit-content;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.hero-btn {
+  width: 220px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: 1px solid #7163a9;
+  background: #7163a9;
+  color: #edeef3;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+  /* animation:  4s; */
+  animation-name: heart-animation;
+  animation-duration: 2s;
+  animation-iteration-count: 10;
+}
+.hero-btn:hover {
+  background: #edeef3;
+  color: #7163a9;
+
+  box-shadow: 1px 1px 5px #808080;
+  transform: scale(1.1);
+  animation: none;
+}
+
+.hero-btn:active {
+  transform: scale(0.9);
+}
+
+/* search Section */
+
+.search-section {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #edeef3;
+}
+.search-section h2 {
+  font-size: 30px;
+  color: #7163a9;
+}
+.search-course {
+  width: 80%;
+  padding: 15px 20px;
+  border-radius: 50px;
+  border: 1px solid #7163a9;
+  position: relative;
+  text-align: center;
+  font-size: 20px;
+  cursor: help;
+}
+.search-course::placeholder {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* mentors Section */
+.mentor-section {
+  /* background: #EDEEF3; */
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 0 30px;
+}
+
+.mentor-section h2 {
+  color: #7163a9;
+  font-size: 30px;
+}
+.mentors-card {
+  margin: 0 30px;
+}
+.mentors-card img {
+  /* width: 150px!important; */
+  border-radius: 300px;
+
+  /* border: 1px solid #683e9f; */
+  -webkit-filter: drop-shadow(5px 5px 5px #7163a9);
+  filter: drop-shadow(5px 5px 5px #7163a9);
+}
+
+.mentors-card h5 {
+  font-size: 20px;
+  margin-top: 25px;
+  font-weight: 500;
+  text-align: center;
+  color: #7163a9;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  padding: 10px !important;
+  color: #fff;
+  font-size: 20px;
+  background: #7163a9;
+}
+
+.owl-carousel .owl-nav button.owl-prev:active,
+.owl-carousel .owl-nav button.owl-next:active,
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover {
+  transition: 0.5s;
+  background: #683e9f;
+}
+.owl-dots {
+  display: none;
+}
+
+.achievers-work {
+  height: 150px;
+  background: #edeef3;
+}
+
+.achievers-work h2 {
+  /* display: flex; */
+  font-size: 20px;
+  color: #7163a9;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.achievers-work .image-block {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 30px;
+}
+.achievers-work .image-block img {
+  width: 100px;
+  transition: 0.2s ease-in-out;
+}
+.achievers-work .image-block img:hover {
+  transform: scale(1.1);
+}
+
+/* Upcoming Courses */
+.upcoming-courses {
+  /* height: 700px; */
+  background: #edeef3;
+  text-align: center;
+  padding-bottom: 40px;
+}
+.upcoming-courses h2 {
+  font-size: 35px;
+  color: #7163a9;
+  padding-top: 50px;
+}
+.courses-title {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.courses-title .course-title:first-child {
+  background-color: #683e9f;
+  color: #fff;
+}
+.courses-title .course-title {
+  padding: 10px 20px;
+  border: 1px solid #7163a9;
+  color: #7163a9;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 60px 0;
+  transition: 0.3s ease-in-out;
+}
+
+.courses-title .course-title:hover {
+  background: #7163a9;
+  color: #edeef3;
+}
+
+.course-card {
+  margin: 10px 20px;
+  text-align: left;
+  border: 1px solid #683e9f;
+  padding: 20px;
+  border-radius: 10px;
+  height: 260px;
+  box-shadow: 2px 2px 5px 0px #683e9f;
+  transition: 0.3s;
+}
+.course-card:hover {
+  transform: scale(1.1);
+}
+.course-card .course-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #683e9f;
+}
+.course-card .course-instructor {
+  font-size: 14px;
+  font-weight: 500;
+}
+.course-card .price-block {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.price-block .course-price {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.price-block .course-status {
+  border: 1px solid #1ee24f;
+  color: #1ee24f;
+  font-size: 14px;
+  padding: 2px 5px;
+}
+
+.upcoming-courses .owl-stage-outer {
+  padding: 20px 0;
+}
+
+/* Our Products */
+.products {
+  /* height: 600px; */
+  padding: 50px 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.our-product {
+  /* width: 50%; */
+}
+.products h2 {
+  font-size: 25px;
+  color: #683e9f;
+  text-align: center;
+}
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.products-card {
+  width: 30%;
+  text-align: center;
+  cursor: pointer;
+
+  /* box-shadow: 2px 2px 10px #000; */
+}
+.products-card img {
+  width: 100px;
+}
+.products-card h4 {
+  text-align: center;
+  margin: 10px 0;
+}
+.products-card p {
+  font-size: 12px;
+  color: #4a4a4a;
+  font-weight: 500;
+}
+.our-acheivement {
+  /* width: 50%; */
+  position: relative;
+  margin-left: 50px;
+}
+
+.our-acheivement img {
+  width: 100px;
+}
+.our-acheivement h2 {
+  font-size: 25px;
+  color: #683e9f;
+  text-align: center;
+}
+.our-acheivement h3 span {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #7163a9;
+}
+
+.our-acheivement div {
+  padding: 20px;
+  background-color: #edeef3;
+  border-radius: 20px;
+
+  width: fit-content;
+  transition: 0.3s ease-in-out;
+  animation-name: heart-animation;
+  animation-duration: 2s;
+  animation-iteration-count: 5;
+}
+
+.our-acheivement div:hover {
+  box-shadow: 1px 1px 5px #7163a9;
+  transform: scale(1.1);
+  animation: none;
+}
+
+.our-acheivement .courses {
+  position: absolute;
+  top: 60px;
+  left: 170px;
+  animation-delay: 0.5s;
+}
+.our-acheivement .transition {
+  position: absolute;
+  top: 230px;
+  right: 60px;
+  animation-delay: 0.9s;
+}
+.our-acheivement .enrolled {
+  position: absolute;
+  bottom: -30px;
+  left: 75px;
+  animation-delay: 0.1s;
+}
+
+/* hackthon section */
+.hackthon-partner {
+  /* height: 400px; */
+  text-align: center;
+  padding: 40px 30px;
+  background: #edeef3;
+}
+.hackthon-partner h2 {
+  font-size: 35px;
+  color: #683e9f;
+  margin-bottom: 50px;
+}
+.companies-list {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.companies-list img {
+  width: 150px;
+  transition: 0.3s;
+}
+
+.companies-list img:hover {
+  transform: scale(1.1);
+  -webkit-filter: drop-shadow(2px 2px 2px #7163a9);
+  filter: drop-shadow(2px 2px 2px #7163a9);
+}
+.hackthon-partner .more-text {
+  margin: 40px 0 10px 0;
+  font-weight: 800;
+  color: #808080;
+  font-size: 14px;
+}
+
+/* hall-of-fame */
+.hall-of-fame {
+  padding: 30px 0px;
+  height: 500px;
+  text-align: center;
+  overflow: hidden;
+}
+.hall-of-fame h2 {
+  font-size: 35px;
+  text-align: center;
+  color: #683e9f;
+}
+.fame-card {
+  background: #edeef3;
+  width: 70%;
+  margin: 20px 20px;
+  box-shadow: 1px 1px 10px #808080;
+  padding: 30px;
+  border-radius: 15px;
+
+  border-top: 3px solid #7163a9;
+  border-bottom: 3px solid #7163a9;
+  /* border-radius: 10px; */
+  /* margin: 0 30px; */
+}
+.fame-card .fame-img {
+  width: 100px !important;
+  border-radius: 100px;
+  margin: 10px auto;
+}
+
+.fame-card h5 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #4a4a4a;
+}
+
+.fame-card .fame-designation {
+  font-size: 16px;
+  margin: 10px 0;
+}
+.fame-card .fame-description {
+  font-size: 14px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fame-card .social-icon {
+  width: 20px !important;
+  margin: 10px auto;
+}
+
+.hall-of-fame .owl-carousel.owl-drag .owl-item {
+  width: 300px !important;
+}
+
+/* Footer */
+
+.footer {
+  background: #7163a9;
+  height: 400px;
+  padding: 30px;
+  padding-top: 80px;
+}
+
+.footer-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-details > div {
+  padding: 20px;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+  border-radius: 10px;
+  margin: 0 30px;
+}
+
+.footer-loction {
+}
+.footer-social-icons img {
+  width: 60px;
+}
+
+.footer-social-icons .social-icons {
+  display: flex;
+
+  /* border-top: 2px solid #EDEEF3; */
+  padding-top: 10px;
+}
+
+.footer-social-icons .social-icons img:hover {
+  transition: 0.3s;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.footer-logo {
+  width: 150px !important;
+  /* border-bottom: 2px solid #EDEEF3; */
+  padding-bottom: 10px;
+  margin: 0 25%;
+}
+
+.footer-loction .location {
+  display: flex;
+  margin: 30px 0;
+  gap: 10px;
+  color: #edeef3;
+}
+.footer-loction .location img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-loction .mail {
+  display: flex;
+  margin: 30px 0;
+  gap: 10px;
+  color: #edeef3;
+}
+.footer-loction .mail a {
+  text-decoration: none;
+  color: #edeef3;
+  font-weight: 600;
+}
+
+.footer-company,
+.footer-products {
+  text-align: center;
+}
+.footer-company h2,
+.footer-products h2 {
+  color: #fcfbfd;
+  border-bottom: 1px dashed #683e9f;
+  padding-bottom: 20px;
+}
+.footer-company ul li,
+.footer-products ul li {
+  list-style: none;
+  padding: 6px 0;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.footer-products ul li {
+  padding: 10px 0;
+  font-weight: 600;
+}
+
+.footer-company ul li:hover,
+.footer-products ul li:hover {
+  transform: scale(1.1);
+}
+
+@keyframes heart-animation {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
